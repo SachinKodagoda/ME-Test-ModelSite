@@ -1,0 +1,316 @@
+/*Normalization Starts*/
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+/* Extract from normalize.css v7.0.0 by Nicolas Gallagher and Jonathan Neal git.io/normalize */
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section {
+  display: block;
+}
+summary {
+  display: list-item;
+}
+audio, canvas, progress, video {
+  display: inline-block;
+}
+progress {
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden], template {
+  display: none;
+}
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+a:active, a:hover {
+  outline-width: 0;
+}
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+dfn {
+  font-style: italic;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+figure {
+  margin: 1em 40px;
+}
+img {
+  border-style: none;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+code, kbd, pre, samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+button, input, select, textarea {
+  font: inherit;
+  margin: 0;
+}
+optgroup {
+  font-weight: bold;
+  margin: 0;
+}
+button, input {
+  overflow: visible;
+}
+button, select {
+  text-transform: none;
+}
+button, html [type="button"], [type="reset"], [type="submit"] {
+  -webkit-appearance: button;
+}
+button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: .35em .625em .75em;
+}
+legend {
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+textarea {
+  overflow: auto;
+}
+[type="checkbox"], [type="radio"] {
+  padding: 0;
+}
+[type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+[type="search"]::-webkit-search-cancel-button, [type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+b, strong {
+  font-weight: 400;
+}
+/* End extract */
+html, body {
+  font-family: Verdana, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+html {
+  overflow-x: hidden;
+}
+h1 {
+  font-size: 36px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 20px;
+}
+h5 {
+  font-size: 18px;
+}
+h6 {
+  font-size: 16px;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-weight: 400;
+  margin: 10px 0;
+}
+hr {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 20px 0;
+}
+img {
+  margin-bottom: -5px;
+}
+a {
+  color: inherit;
+}
+/*Normalization Finished*/
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.container {
+  padding: 0.01rem 1rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.containerWrapper {
+  padding: 4.5rem 0;
+}
+.FeatureSectionContent {
+  color: white;
+  background: #2f5572;
+}
+.headline {
+    font-weight: 300;
+    font-size: 2.875rem;
+    color: #2f5572;
+  }
+.headline-centered {
+    text-align: center;
+  }
+.headline-oranged {
+    color: #d59541;
+  }
+.headline-small {
+    font-size: 1.875rem;
+  }
+.headline-narrow {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+.headline-light {
+    font-weight: 100;
+  }
+.headline-bMarginLarge {
+    margin-bottom: 1.6em;
+  }
+.headline-bMarginSmall {
+    margin-bottom: .5em;
+  }
+.btn {
+  background-color: #2f5572;
+  color: #FFF;
+  text-decoration: none;
+  padding: .75rem 1.2rem;
+  display: inline-block;
+}
+.btn-orange {
+    background-color: #d59541;
+  }
+.btn-large {
+    padding: 1.1rem 1.9rem;
+  }
+@media (min-width: 530px) {
+.btn-large {
+      font-size: 1.25rem
+  }
+  }
+.MainSection {
+  border-bottom: 10px solid #2f5572;
+  position: relative;
+}
+.MainSectionBack_image {
+      display: block;
+    }
+.MainSectionContent {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+.MainSectionContent_title {
+      font-weight: 300;
+      color: #2f5572;
+      margin: 0;
+      font-size: 2.4rem;
+    }
+@media (min-width: 530px) {
+.MainSectionContent_title {
+        font-size: 4.8rem
+    }
+  }
+.MainSectionContent_subtitle {
+      font-weight: 300;
+      color: #2f5572;
+      font-size: 1.5rem;
+      margin: 0;
+    }
+@media (min-width: 530px) {
+.MainSectionContent_subtitle {
+        font-size: 2.9rem
+    }
+  }
+.MainSectionContent_description {
+      color: #FFF;
+      font-size: 1.1rem;
+      font-weight: 100;
+      text-shadow: 2px 2px 0 rgba(0, 0, 0, .1);
+      max-width: 30rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+@media (min-width: 530px) {
+.MainSectionContent_description {
+        font-size: 1.875rem
+    }
+  }

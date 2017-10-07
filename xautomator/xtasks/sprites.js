@@ -14,7 +14,7 @@ var config = {
       }
     }
   }
-}
+};
 
 gulp.task('beginClean', function() {
   return del(['./xautomator/xtemp/sprites', './xoutput/images/sprites']);
