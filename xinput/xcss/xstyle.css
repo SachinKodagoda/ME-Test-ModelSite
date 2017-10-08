@@ -2,149 +2,369 @@
 $mainBlue: #2f5572;
 $mainOrange: #d59541;
 @define-mixin atSmall {
-  @media (min-width: 530px) {
-    @mixin-content;
-  }
+	@media (min-width: 530px) {
+		@mixin-content;
+	}
 }
 
 @define-mixin atMedium {
-  @media (min-width: 800px) {
-    @mixin-content;
-  }
+	@media (min-width: 800px) {
+		@mixin-content;
+	}
 }
 
 @define-mixin atLarge {
-  @media (min-width: 1200px) {
-    @mixin-content;
-  }
+	@media (min-width: 1200px) {
+		@mixin-content;
+	}
 }
 
 @define-mixin clearfix {
-  &::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
+	&::after {
+		content: "";
+		clear: both;
+		display: table;
+	}
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  color: #333;
+	font-family: 'Roboto', sans-serif;
+	color: #333;
 }
 
 img {
-  max-width: 100%;
-  height: auto;
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+	color: $mainOrange;
 }
 
 .container {
-  padding: 0.01rem 1rem;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+	padding-left: 18px;
+	padding-right: 18px;
+	max-width: 1236px;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+	&-noPaddingUntilMedium {
+		padding-left: 0;
+		padding-right: 0;
+		@mixin atMedium {
+			padding-left: 18px;
+			padding-right: 18px;
+		}
+	}
 }
 
 .containerWrapper {
-  padding: 4.5rem 0;
-}
-
-.FeatureSectionContent {
-  color: white;
-  background: $mainBlue;
+	padding: .2rem 0;
+	@mixin atMedium {
+		padding: 2.5rem 0;
+	}
+	&-medium {
+		max-width: 976px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	&-bMargin {
+		margin-bottom: 1rem;
+		@mixin atSmall {
+			margin-bottom: 3.875rem;
+		}
+	}
 }
 
 .headline {
-  & {
-    font-weight: 300;
-    font-size: 2.875rem;
-    color: $mainBlue;
-  }
-  &-centered {
-    text-align: center;
-  }
-  &-oranged {
-    color: $mainOrange;
-  }
-  &-small {
-    font-size: 1.875rem;
-  }
-  &-narrow {
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  &-light {
-    font-weight: 100;
-  }
-  &-bMarginLarge {
-    margin-bottom: 1.6em;
-  }
-  &-bMarginSmall {
-    margin-bottom: .5em;
-  }
+	& {
+		font-weight: 300;
+		font-size: 1.9rem;
+		color: $mainBlue;
+		@mixin atSmall {
+			font-size: 2.875rem;
+		}
+	}
+	&-centered {
+		text-align: center;
+	}
+	&-oranged {
+		color: $mainOrange;
+	}
+	&-small {
+		font-size: 1.2rem;
+		@mixin atSmall {
+			font-size: 1.875rem;
+		}
+	}
+	&-narrow {
+		max-width: 500px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	&-light {
+		font-weight: 100;
+	}
+	&-bMarginLarge {
+		margin-bottom: 1.6em;
+	}
+	&-bMarginSmall {
+		margin-bottom: .5em;
+	}
+	&-no-tmargin {
+		margin-top: 0;
+	}
 }
 
 .btn {
-  background-color: $mainBlue;
-  color: #FFF;
-  text-decoration: none;
-  padding: .75rem 1.2rem;
-  display: inline-block;
-  &-orange {
-    background-color: $mainOrange;
-  }
-  &-large {
-    padding: 1.1rem 1.9rem;
-    @mixin atSmall {
-      font-size: 1.25rem;
-    }
-  }
+	background-color: $mainBlue;
+	color: #FFF;
+	text-decoration: none;
+	padding: .75rem 1.2rem;
+	display: inline-block;
+	&-orange {
+		background-color: $mainOrange;
+	}
+	&-large {
+		padding: 1.1rem 1.9rem;
+		@mixin atSmall {
+			font-size: 1.25rem;
+		}
+	}
 }
 
 .MainSection {
-  border-bottom: 10px solid $mainBlue;
-  position: relative;
-  &Back {
-    &_image {
-      display: block;
-    }
-  }
-  &Content {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-    width: 100%;
-    text-align: center;
-    &_title {
-      font-weight: 300;
-      color: $mainBlue;
-      margin: 0;
-      font-size: 2.4rem;
-      @mixin atSmall {
-        font-size: 4.8rem;
-      }
-    }
-    &_subtitle {
-      font-weight: 300;
-      color: $mainBlue;
-      font-size: 1.5rem;
-      margin: 0;
-      @mixin atSmall {
-        font-size: 2.9rem;
-      }
-    }
-    &_description {
-      color: #FFF;
-      font-size: 1.1rem;
-      font-weight: 100;
-      text-shadow: 2px 2px 0 rgba(0, 0, 0, .1);
-      max-width: 30rem;
-      margin-left: auto;
-      margin-right: auto;
-      @mixin atSmall {
-        font-size: 1.875rem;
-      }
-    }
-  }
+	border-bottom: 10px solid $mainBlue;
+	position: relative;
+	&Back {
+		&_image {
+			display: block;
+		}
+	}
+	&Content {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 0;
+		width: 100%;
+		text-align: center;
+		&_title {
+			font-weight: 300;
+			color: $mainBlue;
+			margin: 0;
+			font-size: 2.4rem;
+			@mixin atSmall {
+				font-size: 4.8rem;
+			}
+		}
+		&_subtitle {
+			font-weight: 300;
+			color: $mainBlue;
+			font-size: 1.5rem;
+			margin: 0;
+			@mixin atSmall {
+				font-size: 2.9rem;
+			}
+		}
+		&_description {
+			color: #FFF;
+			font-size: 1.1rem;
+			font-weight: 100;
+			text-shadow: 2px 2px 0 rgba(0, 0, 0, .1);
+			max-width: 30rem;
+			margin-left: auto;
+			margin-right: auto;
+			@mixin atSmall {
+				font-size: 1.875rem;
+			}
+		}
+	}
+}
+
+.row {
+	@mixin clearfix;
+	&-gutters {
+		margin-right: -65px;
+		&-large {
+			margin-right: -100px;
+		}
+		&-small {
+			margin-right: -45px;
+		}
+	}
+	&-Tpadding {
+		padding-top: 80px;
+	}
+	&-gutters>div {
+		padding-right: 65px;
+	}
+	&-gutters-large>div {
+		padding-right: 100px;
+	}
+	&-gutters-small>div {
+		padding-right: 45px;
+	}
+	&_m4-BmarginUntilMedium {
+		margin-bottom: 1rem;
+	}
+	@mixin atMedium {
+		&_m4 {
+			float: left;
+			width: 33.33%;
+			&-larger {
+				width: 37%;
+			}
+			&-BmarginUntilMedium {
+				margin-bottom: 0;
+			}
+		}
+		&_m8 {
+			float: left;
+			width: 66.66%;
+			&-smaller {
+				width: 63%;
+			}
+		}
+		&_m6 {
+			float: left;
+			width: 50%;
+		}
+	}
+	/*Begin Equal Height Rules*/
+	&-equalHight-m {
+		@mixin atMedium {
+			display: flex;
+		}
+		&>div {
+			float: none;
+			display: flex;
+		}
+	}
+}
+
+.genericContent {
+	p {
+		font-weight: 300;
+		line-height: 1.65;
+		margin: 0 0 1.8rem 0;
+		@mixin atSmall {
+			font-size: 1.25rem;
+		}
+	}
+	p a {
+		font-weight: 700;
+	}
+}
+
+.FeatureSectionContent {
+	color: white;
+	background: $mainBlue;
+	&_title {
+		font-size: 2.55rem;
+		font-weight: 300;
+		text-align: center;
+		&-blue {
+			color: $mainBlue;
+		}
+		&_icon {
+			display: block;
+			margin-right: auto;
+			margin-left: auto;
+			margin-bottom: .6rem;
+			@mixin atSmall {
+				position: relative;
+				top: 8px;
+				margin-right: .5rem;
+				margin-left: 0;
+				margin-bottom: 0;
+				display: inline;
+			}
+		}
+		strong {
+			font-weight: 500;
+		}
+		@mixin atSmall {
+			font-size: 3.75rem;
+		}
+	}
+}
+
+.FeatureItem {
+	position: relative;
+	padding-bottom: 2.5rem;
+	@mixin atSmall {
+		padding-left: 94px;
+	}
+	&_icon {
+		display: block;
+		margin: 0 auto;
+		@mixin atSmall {
+			position: absolute;
+			left: 0;
+		}
+	}
+	&_title {
+		font-size: 1.6rem;
+		font-weight: 300;
+		margin-bottom: .8rem;
+		margin-top: .7em;
+		text-align: center;
+		@mixin atSmall {
+			text-align: left;
+			margin-top: 1em;
+			font-size: 1.875rem;
+		}
+	}
+}
+
+.Testimonials {
+	padding: 1.2rem 0;
+	background-color: #e0e6ef;
+	@mixin atMedium {
+		padding: 4.5rem 0;
+		background: url('/images/testimonials-bg.jpg') top center no-repeat;
+		background-size: cover;
+	}
+	&_NoBMarginUntilMedium {
+		padding-bottom: 0;
+		@mixin atMedium {
+			padding-bottom: 4.5rem;
+		}
+	}
+	&Content {
+		background-color: rgba(255, 255, 255, .8);
+		padding: 0 18px 1px 18px;
+		margin-bottom: 98px;
+		@mixin atMedium {
+			margin-bottom: 0;
+			padding: 0 1.8125rem 1px 1.825rem;
+		}
+		&_last {
+			margin-bottom: 0;
+		}
+		&_image {
+			border-radius: 80px;
+			overflow: hidden;
+			width: 160px;
+			height: 160px;
+			margin: 0 auto -80px auto;
+			position: relative;
+			top: -80px;
+			border: 6px solid rgba(255, 255, 255, .8);
+		}
+		&_title {
+			color: $mainBlue;
+			text-align: center;
+			font-size: 1.5rem;
+			font-weight: 500;
+			margin: 0;
+		}
+		&_subTitle {
+			color: $mainOrange;
+			text-align: center;
+			font-weight: 400;
+			font-size: 0.9375rem;
+			margin: .25rem 0 1rem 0;
+		}
+	}
 }
