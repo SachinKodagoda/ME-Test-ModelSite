@@ -1,4 +1,6 @@
 @import "xmodule/xbase/_normalize";
+@import "xmodule/xsprite/_sprite.css";
+
 $mainBlue: #2f5572;
 $mainOrange: #d59541;
 @define-mixin atSmall {

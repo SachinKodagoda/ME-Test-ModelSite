@@ -6,7 +6,7 @@
     }
   {{/first}}
 
-  .icon--{{base}} {
+  .icon-{{base}} {
     width: {{width.outer}}px;
     height: {{height.outer}}px;
     background-position: {{position.relative.xy}};
