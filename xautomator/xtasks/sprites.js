@@ -34,7 +34,7 @@ gulp.task('copySpriteGraphic', ['createSprite'], function() {
 gulp.task('copySpriteCSS', ['createSprite'], function() {
   return gulp.src('./xautomator/xtemp/sprites/css/*.css')
     .pipe(rename('_sprite.css'))
-    .pipe(gulp.dest('./xinput/xcss/xmodules/xsprite'));
+    .pipe(gulp.dest('./xinput/xcss/xmodule/xsprite'));
 });
 
 gulp.task('endClean', ['copySpriteGraphic', 'copySpriteCSS'], function() {
