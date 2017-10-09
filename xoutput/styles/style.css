@@ -524,7 +524,7 @@ a {
 				margin-right: .5rem;
 				margin-left: 0;
 				margin-bottom: 0;
-				display: inline
+				display: inline-block
 		}
 	}
 .FeatureSectionContent_title strong {
