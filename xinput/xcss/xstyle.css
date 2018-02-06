@@ -1,6 +1,5 @@
 @import "xmodule/xbase/_normalize";
 @import "xmodule/xsprite/_sprite.css";
-
 $mainBlue: #2f5572;
 $mainOrange: #d59541;
 @define-mixin atSmall {
@@ -50,6 +49,9 @@ a {
 	margin-left: auto;
 	margin-right: auto;
 	overflow: hidden;
+	&--narrow{
+		max-width:470px;
+	}
 	&-noPaddingUntilMedium {
 		padding-left: 0;
 		padding-right: 0;
@@ -144,12 +146,16 @@ a {
 		}
 	}
 	&Content {
+		padding-top: 88px;
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
 		left: 0;
 		width: 100%;
 		text-align: center;
+		@mixin atMedium{
+			padding-top: 60px;
+		}
 		&_title {
 			font-weight: 300;
 			color: $mainBlue;
@@ -233,7 +239,7 @@ a {
 		}
 	}
 	/*Begin Equal Height Rules*/
-	&-equalHight-m {
+.flexbox &-equalHight-m {
 		@mixin atMedium {
 			display: flex;
 		}
@@ -324,8 +330,10 @@ a {
 	background-color: #e0e6ef;
 	@mixin atMedium {
 		padding: 4.5rem 0;
-		background: url('/images/testimonials-bg.jpg') top center no-repeat;
-		background-size: cover;
+		&.lazyloaded{
+			background: url('/images/testimonials-bg.jpg') top center no-repeat;
+			background-size: cover;
+		}
 	}
 	&_NoBMarginUntilMedium {
 		padding-bottom: 0;
@@ -367,6 +375,298 @@ a {
 			font-weight: 400;
 			font-size: 0.9375rem;
 			margin: .25rem 0 1rem 0;
+		}
+	}
+}
+
+.footerClass {
+	background: $mainBlue;
+	color: #fff;
+	padding: .5rem 0;
+	text-align: center;
+	font-weight: 200;
+	&_text {
+		display: block;
+		margin-bottom: 1rem;
+		@mixin atMedium {
+			display: inline;
+			margin-bottom: 0;
+			margin-right: 1.4rem;
+		}
+	}
+}
+
+.headerClass {
+	position: absolute;
+	z-index: 2;
+	width: 100%;
+	display: inline-block;
+	padding: 10px 0;
+
+	@mixin atMedium{
+		background-color: rgba($mainBlue, .3);
+		position: fixed;
+	}
+	&-expanded{
+		transition:background-color .3s ease-out;
+		background-color: rgba($mainBlue, .55);
+	}
+	&_logo{
+		top:0;
+		position: absolute;
+		background-color: $mainBlue;
+		padding: 25px 36px;
+		left: 50%;
+		transform:translateX(-50%) scale(.8);
+		transition: transform .3s ease-out;
+		transform-origin: 50% 0%;
+
+
+		@mixin atMedium{
+			left: auto;
+			transform:translateX(0);
+			.stickBlue &{
+				transform: scale(.57);
+			}
+		}
+	}
+}
+
+.headerClass_btn {
+	margin-top:-10px;
+	@mixin atMedium{
+		float: right;
+		margin-top:0;
+	}
+}
+
+.primaryNav {
+	display: inline-block;
+	text-decoration: none;
+	margin-top: 0;
+	@mixin atMedium{
+			margin-top: 0;
+	}
+	&.pullRight {
+		@mixin atMedium{
+				float: right;
+		}
+		ul {
+			margin: 0;
+			padding: 0;
+			@mixin clearfix;
+		}
+		li {
+			display: inline-block;
+			list-style: none;
+			display: inline-block;
+			padding-right: 7px;
+			padding-top: 12px;
+			@mixin atMedium{
+				 	padding-right: 20px;
+					float: left;
+					display: block;
+			}
+		}
+		li:last-child{
+			padding-right: 0;
+			@mixin atMedium{
+			 padding-right: 20px;
+			}
+		}
+		a{
+			color: #fff;
+			text-decoration: none;
+			font-weight: 300;
+			padding: 5px 8px;
+			font-size: .8rem;
+			background-color: rgba($mainBlue, .5);
+			@mixin atMedium{
+				padding: 12px 0;
+				font-size: 1rem;
+				background-color: transparent;
+			}
+		}
+	}
+}
+
+.displayBlock{
+	display: block;
+}
+
+.logoSub{
+text-indent: -9999px;
+}
+
+.siteMenu{
+	transform: scale(1.2);
+	transition: all .3s ease-out;
+	position: relative;
+	z-index: -10;
+	opacity:0;
+	padding-top: 100px;
+	text-align: center;
+	@mixin atMedium{
+		opacity:1;
+		z-index: 1;
+		padding-top: 0;
+		transform: scale(1);
+	}
+}
+
+.menuIcon{
+	width: 20px;
+	height: 19px;
+	position: absolute;
+	top:10px;
+	right: 10px;
+	z-index: 10;
+	&::before{
+		content: "";
+		position: absolute;
+		top:0;
+		left:0;
+		width: 20px;
+		height: 3px;
+		background-color: #fff;
+		transform-origin:0 0;
+		transition: transform .3s ease-out;
+	}
+	&_middle{
+		position: absolute;
+		top:8px;
+		left:0;
+		width: 20px;
+		height: 3px;
+		background-color: #fff;
+		transition: all .3s ease-out;
+		transform-origin:0 50%;
+	}
+	&::after{
+		content: "";
+		position: absolute;
+		bottom:0;
+		left:0;
+		width: 20px;
+		height: 3px;
+		background-color: #fff;
+		transform-origin:0 100%;
+		transition: transform .3s ease-out;
+	}
+
+	@mixin atMedium{
+		display: none;
+	}
+
+}
+
+.navigtion-visible{
+	opacity:1;
+	z-index: 1;
+	transform: scale(1);
+}
+.cross{
+	&::before{
+		transform:rotate(45deg) scaleX(1.25);
+	}
+	.menuIcon_middle{
+		opacity:0;
+		transform: scaleX(0);
+	}
+	&::after{
+		transform:rotate(-45deg) scaleX(1.25) translateY(1px);
+	}
+
+}
+
+.reveal{
+	opacity:0;
+	transform: scale(1.15);
+	transition: all 1.5s ease-out;
+	&_show{
+		opacity:1;
+		transform: scale(1);
+	}
+}
+.stickBlue{
+	@mixin atMedium{
+		background-color: rgba(23,51,72,.85);
+	}
+}
+
+.dockColor{
+	@mixin atMedium{
+		color:#fabb69 !important;
+	}
+}
+.modal{
+	position: fixed;
+	top:0;
+	bottom:0;
+	right:0;
+	left:0;
+	background-color: rgba(255,255,255,.94);
+	z-index: 5;
+	opacity: 0;
+	visibility: hidden;
+	transform: scale(1.2);
+	transition: all .3s ease-out;
+	&_visible{
+		visibility: visible;
+		opacity: 1;
+		transform: scale(1);
+	}
+	&_description{
+		text-align:center;
+		font-size:1.3rem;
+		line-height: 1.65;
+	}
+	&_close{
+		position: absolute;
+		top:15px;
+		right:15px;
+		font-size:2rem;
+		transform: scaleX(1.2);
+		transform-origin: 100% 0;
+		color:$mainBlue;
+		cursor:pointer;
+		&:hover{
+			color:$mainOrange;
+		}
+	}
+	&_inner{
+		position: absolute;
+		width: 100%;
+		top:50%;
+		transform: translateY(-50%);
+	}
+}
+
+.lessTitle{
+	margin-bottom: 0.5rem;
+	margin-top: 0;
+}
+
+.social-icons{
+	text-align: center;
+	&_icon{
+		display: inline-block;
+		position: relative;
+		width: 33%;
+		height: 72px;
+		margin: 0 5px 5px 5px;
+
+		background-color: $mainOrange;
+		@mixin atSmall{
+			width: 72px;
+			margin: 0 5px;
+		}
+		.icon{
+			position: absolute;
+			display: block;
+			top:50%;
+			left:50%;
+			transform: translate(-50%,-50%);
 		}
 	}
 }

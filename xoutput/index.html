@@ -8,52 +8,72 @@
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 	<meta name="keywords" content="Software Development, WDA">
 	<meta name="description" content="Technology over technique produces emotionless design.">
+	<!-- build:css /assets/styles/style.css -->
 	<link rel="stylesheet" href="styles/style.css">
+	<!-- endbuild -->
+
+	<!-- build:js /assets/scripts/Vendor.js -->
+	<script src="js/Vendor.js"></script>
+	<!-- endbuild -->
 </head>
 
 <body>
-	<header>
-		<span class="icon icon-clerview"></span>
-		<a href="#" class="btn">Get in Touch</a>
-		<nav>
-			<ul>
-				<li><a href="#our-beginning">Our Beginning</a></li>
-				<li><a href="#features">Features</a></li>
-				<li><a href="#testimonials">Testimonials</a></li>
-			</ul>
-		</nav>
+	<header class="headerClass">
+	<div class="container">
+		<div class="headerClass_logo">
+			<div class="icon icon-clerview logoSub">
+				Clear View Escapes
+			</div>
+		</div>
+		<div class="menuIcon">
+			<div class="menuIcon_middle"></div>
+		</div>
+
+<div class="siteMenu">
+	<div class="headerClass_btn">
+		<a href="#" class="btn open-modal">Get in Touch</a>
+	</div>
+	<nav class="primaryNav pullRight">
+		<ul>
+			<li><a href="#our-beginning" id="our-beginning-link" class="kick">Our Beginning</a></li>
+			<li><a href="#features" id="features-link" class="kick">Features</a></li>
+			<li><a href="#testimonials" id="testimonials-link" class="kick">Testimonials</a></li>
+		</ul>
+	</nav>
+</div>
+	</div>
 	</header>
 
 	<section class="MainSection">
 		<picture class="MainSectionBack">
-			<source srcset="images/MainSectionBack-large.jpg 1920w, images/MainSectionBack-Xlarge.jpg 3840w" media="(min-width: 1380px)">
-			<source srcset="images/MainSectionBack-medium.jpg 1380w, images/MainSectionBack-Xmedium.jpg 2760w" media="(min-width: 990px)">
-			<source srcset="images/MainSectionBack-small.jpg 990w, images/MainSectionBack-Xsmall.jpg 1980w" media="(min-width: 640px)">
-			<img srcset="images/MainSectionBack-smaller.jpg 640w, images/MainSectionBack-Xsmaller.jpg 1280w" alt="MainSectionBack" class="MainSectionBack_image">
+			<source data-srcset="images/MainSectionBack-large.jpg 1920w, images/MainSectionBack-Xlarge.jpg 3840w" media="(min-width: 1380px)">
+			<source data-srcset="images/MainSectionBack-medium.jpg 1380w, images/MainSectionBack-Xmedium.jpg 2760w" media="(min-width: 990px)">
+			<source data-srcset="images/MainSectionBack-small.jpg 990w, images/MainSectionBack-Xsmall.jpg 1980w" media="(min-width: 640px)">
+			<img data-srcset="images/MainSectionBack-smaller.jpg 640w, images/MainSectionBack-Xsmaller.jpg 1280w" alt="MainSectionBack" class="MainSectionBack_image lazyload">
 		</picture>
 		<div class="MainSectionContent">
 			<div class="container">
 				<h1 class="MainSectionContent_title">Your clarity.</h1>
 				<h2 class="MainSectionContent_subtitle">One trip away.</h2>
 				<p class="MainSectionContent_description">We create soul restoring journeys that inspire you to be you.</p>
-				<p><a href="#" class="btn btn-orange btn-large">Get Started Today</a></p>
+				<p><a href="#" class="btn btn-orange btn-large open-modal">Get Started Today</a></p>
 			</div>
 		</div>
 	</section>
 
-	<div id="our-beginning" class="containerWrapper">
+	<div id="our-beginning" class="page-sectionx containerWrapper" data-maching-link="#our-beginning-link">
 		<div class="container">
 			<h2 class="headline headline-centered headline-light headline-bMarginSmall">The first trip we planned <strong>was our own.</strong></h2>
 			<h3 class="headline headline-centered headline-oranged headline-small headline-narrow headline-light headline-bMarginLarge">Ever since, we&rsquo;ve been working to make travel <strong>better for everyone.</strong></h3>
 			<div class="containerWrapper-medium containerWrapper-bMargin">
-				<img sizes="(min-width: 970px) 976px, 100vw" srcset="images/first-trip-low-res.jpg 565w, images/first-trip.jpg 976w, images/first-trip-hi-dpi.jpg 1952w" alt="Couple walking down a street.">
+				<img class="lazyload" sizes="(min-width: 970px) 976px, 100vw" data-srcset="images/first-trip-low-res.jpg 565w, images/first-trip.jpg 976w, images/first-trip-hi-dpi.jpg 1952w" alt="Couple walking down a street.">
 			</div>
 			<div class="row row-gutters">
 				<div class="row_m4 row_m4-larger row_m4-BmarginUntilMedium">
 					<picture>
-						<source sizes="404px" srcset="images/OurStart.jpg 404w, images/OurStart-X.jpg 808w" media="(min-width: 1020px)">
-						<source sizes="320px" srcset="images/OurStart-portrait.jpg 382w, images/OurStart-Xportrait.jpg 764w" media="(min-width: 800px)">
-						<img srcset="images/OurStart-landscape.jpg 800w, images/OurStart-Xlandscape.jpg 1600w" alt="Our founder, Jane Doe">
+						<source sizes="404px" data-srcset="images/OurStart.jpg 404w, images/OurStart-X.jpg 808w" media="(min-width: 1020px)">
+						<source sizes="320px" data-srcset="images/OurStart-portrait.jpg 382w, images/OurStart-Xportrait.jpg 764w" media="(min-width: 800px)">
+						<img class="lazyload" data-srcset="images/OurStart-landscape.jpg 800w, images/OurStart-Xlandscape.jpg 1600w" alt="Our founder, Jane Doe">
 					</picture>
 				</div>
 				<div class="row_m8 row_m8-smaller">
@@ -70,7 +90,7 @@
 		</div>
 	</div>
 
-	<div id="features" class="FeatureSectionContent containerWrapper">
+	<div id="features" class="page-sectionx FeatureSectionContent containerWrapper" data-maching-link="#features-link">
 		<div class="container">
 			<h2 class="FeatureSectionContent_title"><span class="icon icon-star FeatureSectionContent_title_icon"></span>Our<strong>Features</strong></h2>
 			<div class="row row-gutters-large genericContent">
@@ -102,7 +122,7 @@
 		</div>
 	</div>
 
-	<div id="testimonials" class="Testimonials Testimonials_NoBMarginUntilMedium ">
+	<div id="testimonials" class="page-sectionx Testimonials Testimonials_NoBMarginUntilMedium lazyload" data-maching-link="#testimonials-link">
 		<div class="container container-noPaddingUntilMedium">
 
 			<h2 class="FeatureSectionContent_title FeatureSectionContent_title-blue"><span class="icon icon-comment FeatureSectionContent_title_icon"></span>Real<strong>Testimonials</strong></h2>
@@ -111,7 +131,7 @@
 				<div class="row_m4">
 					<div class="TestimonialsContent">
 						<div class="TestimonialsContent_image">
-							<img src="images/testimonial-jane.jpg">
+							<img class="lazyload" sizes="160px" data-srcset="images/testimonial-jane.jpg 160w, images/testimonial-jane-hi-dpi.jpg 320w">
 						</div>
 						<h3 class="TestimonialsContent_title">Jane Doe</h3>
 						<h4 class="TestimonialsContent_subTitle">9 Time Escaper</h4>
@@ -122,7 +142,7 @@
 				<div class="row_m4">
 					<div class="TestimonialsContent">
 						<div class="TestimonialsContent_image">
-							<img src="images/testimonial-john.jpg">
+							<img class="lazyload" sizes="160px" data-srcset="images/testimonial-john.jpg 160w, images/testimonial-john-hi-dpi.jpg 320w">
 						</div>
 						<h3 class="TestimonialsContent_title">John Smith</h3>
 						<h4 class="TestimonialsContent_subTitle">4 Time Escaper</h4>
@@ -134,7 +154,7 @@
 				<div class="row_m4">
 					<div class="TestimonialsContent TestimonialsContent_last">
 						<div class="TestimonialsContent_image">
-							<img src="images/testimonial-cat.jpg">
+							<img class="lazyload" sizes="160px" data-srcset="images/testimonial-cat.jpg 160w, images/testimonial-cat-hi-dpi.jpg 320w">
 						</div>
 						<h3 class="TestimonialsContent_title">Cat McKitty</h3>
 						<h4 class="TestimonialsContent_subTitle">6 Time Escaper</h4>
@@ -146,9 +166,33 @@
 		</div>
 	</div>
 
-	<footer>
-		<p>Copyright &copy; 2016 Clear View Escapes. All rights reserved. <a href="#" class="btn btn--orange">Get in Touch</a></p>
+	<footer class="footerClass">
+		<div class="container">
+			<p><span class="footerClass_text">Copyright &copy; 2016 Clear View Escapes. All rights reserved.</span> <a href="#" class="btn btn-orange open-modal">Get in Touch</a></p>
+		</div>
 	</footer>
+	<div class="modal">
+	<div class="modal_inner">
+		<div class="container container--narrow">
+				<h2 class="FeatureSectionContent_title FeatureSectionContent_title-blue lessTitle"><span class="icon icon-mail FeatureSectionContent_title_icon"></span>Get in<strong>Touch</strong></h2>
+			<p class="modal_description">
+				We will have an online order system in place soon. Until then, connect with us on any of the platforms below!
+			</p>
+			<div class="social-icons">
+				<a href="#" class="social-icons_icon"><span class="icon icon-facebook"></span></a>
+				<a href="#" class="social-icons_icon"><span class="icon icon-twitter"></span></a>
+				<a href="#" class="social-icons_icon"><span class="icon icon-instagram"></span></a>
+				<a href="#" class="social-icons_icon"><span class="icon icon-youtube"></span></a>
+			</div>
+		</div>
+	</div>
+	<div class="modal_close">X</div>
+	</div>
+
+	<!-- build:js /assets/scripts/script.js -->
+	<script src="js/script.js"></script>
+	<!-- endbuild -->
+
 </body>
 
 </html>
