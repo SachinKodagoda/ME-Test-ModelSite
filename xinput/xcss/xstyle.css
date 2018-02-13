@@ -331,7 +331,7 @@ a {
 	@mixin atMedium {
 		padding: 4.5rem 0;
 		&.lazyloaded{
-			background: url('/images/testimonials-bg.jpg') top center no-repeat;
+			background: url('../images/testimonials-bg.jpg') top center no-repeat;
 			background-size: cover;
 		}
 	}
