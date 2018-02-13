@@ -1,9 +1,9 @@
 /* Do not edit xblocks/_sprite.css directly, Instead edit xautomator/xtemp/spriteTemplate.css */
     .icon {
-      background-image: url('/images/sprites/sprite-c330728d.svg');
+      background-image: url('../images/sprites/sprite-c330728d.svg');
     }
     .no-svg .icon{
-      background-image: url('/images/sprites/sprite-c330728d.png');
+      background-image: url('../images/sprites/sprite-c330728d.png');
     }
 
   .icon-clerview {

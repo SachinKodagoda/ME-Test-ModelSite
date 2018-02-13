@@ -18,7 +18,7 @@ gulp.task('styles', function() {
   var processors = [
     cssImport,
     each,
-    For,    
+    For,
     math,
     conditionals,
     mixins,
@@ -36,5 +36,5 @@ gulp.task('styles', function() {
       this.emit('end');
     })
     .pipe(rename('style.css'))
-    .pipe(gulp.dest('./xoutput/styles'));
+    .pipe(gulp.dest('./xoutput/assets/styles'));
 });

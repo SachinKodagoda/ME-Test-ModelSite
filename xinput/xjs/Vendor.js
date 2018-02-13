@@ -1,3 +1,3 @@
-import "../../xoutput/js/modernizr";
+import "../../xoutput/assets/js/modernizr";
 import 'picturefill';
 import 'lazysizes';

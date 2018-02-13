@@ -1,11 +1,11 @@
 var path = require('path');
 module.exports = {
 	entry: {
-		Xscript: "./xinput/xjs/xscript.js",
-		Vendor: "./xinput/xjs/Vendor.js"
+		script: "./xinput/xjs/xscript.js",
+		vendor: "./xinput/xjs/vendor.js"
 	},
 	output: {
-		path: path.resolve(__dirname,"./xoutput/js/"),
+		path: path.resolve(__dirname,"./xoutput/assets/js/"),
 		filename: "[name].js"
 	},
 	module:{
